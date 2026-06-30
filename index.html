@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>現実逃避の代償</title>
+  <script>
+    window.onload = function() {
+      const url = "https://app.studyplus.jp/record";
+      window.location.href = url; // 1つ目は現在のタブ
+      for (let i = 0; i < 9; i++) {
+        window.open(url, '_blank'); // 残り9つを展開
+      }
+    };
+  </script>
+</head>
+<body style="background-color: black;">
+</body>
+</html>
