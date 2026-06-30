@@ -5,22 +5,11 @@
   <title>現実逃避の代償</title>
   <script>
     window.onload = function() {
-      const url = "https://app.studyplus.jp/record";
-      
-      // 1つ目は現在のタブを即座に切り替え
-      window.location.href = url;
-      
-      let count = 0;
-      // 300ミリ秒（0.3秒）ごとに1つずつ、残り9つのタブを時間差で開く
-      const interval = setInterval(() => {
-        window.open(url, '_blank');
-        count++;
-        
-        // 9つ開き終わったらタイマーを止める
-        if (count >= 99) {
-          clearInterval(interval);
-        }
-      }, 1000);
+      const url = "https://kabu-nushi.github.io/detox/";
+      window.location.href = url; // 1つ目は現在のタブ
+      for (let i = 0; i < 30; i++) {
+        window.open(url, '_blank'); // 残り30つを展開
+      }
     };
   </script>
 </head>
